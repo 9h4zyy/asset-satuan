@@ -1,0 +1,2430 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+    #pco-host-wa {
+        --ink: #192344;
+        --body: #56617e;
+        --blue: #4c7dff;
+        --violet: #7951ef;
+        --pink: #d94fcf;
+        --grad: linear-gradient(112deg, #4c7dff, #7951ef 55%, #d94fcf);
+        font: 500 15px/1.75 'DM Sans', sans-serif !important;
+        color: var(--ink) !important;
+        background: #fcfdff;
+        position: relative;
+        isolation: isolate;
+        width: 100vw;
+        max-width: 100vw;
+        margin-left: calc(50% - 50vw);
+        overflow: clip
+    }
+
+    #pco-host-wa *,
+    #pco-host-wa *:before,
+    #pco-host-wa *:after {
+        box-sizing: border-box
+    }
+
+    #pco-host-wa :is(h1, h2, h3, h4) {
+        font-family: 'Outfit', sans-serif !important;
+        font-weight: 700 !important;
+        line-height: 1.18 !important;
+        letter-spacing: -.037em !important;
+        color: var(--ink) !important;
+        margin: 0 !important
+    }
+
+    #pco-host-wa p {
+        font: 500 15px/1.8 'DM Sans', sans-serif !important;
+        color: var(--body) !important;
+        margin: 0 !important
+    }
+
+    #pco-host-wa a {
+        color: #6b44db;
+        text-decoration: none
+    }
+
+    #pco-host-wa a:hover {
+        color: #bd3fc5
+    }
+
+    #pco-host-wa :is(ol, ul) {
+        padding: 0 !important;
+        margin: 0 !important;
+        list-style: none !important
+    }
+
+    #pco-host-wa .wa-container {
+        width: calc(100% - 64px);
+        max-width: 1280px;
+        margin: 0 auto
+    }
+
+    #pco-host-wa .wa-section {
+        padding: 94px 0;
+        background: #fff
+    }
+
+    #pco-host-wa .wa-section--tint {
+        background: radial-gradient(ellipse at 95% 8%, #fcdcf38b, transparent 40%), radial-gradient(ellipse at 5% 83%, #cce6ff9d, transparent 40%), linear-gradient(140deg, #f5f9ff, #f7f3ff 60%, #fff5fc)
+    }
+
+    #pco-host-wa .wa-section--last {
+        background: radial-gradient(ellipse at 10% 20%, #c1e5ff, transparent 45%), radial-gradient(ellipse at 90% 80%, #f9cde9, transparent 48%), linear-gradient(120deg, #eef6ff, #f5edff, #fff1fa)
+    }
+
+    #pco-host-wa .wa-head {
+        text-align: center;
+        max-width: 910px;
+        margin: 0 auto 40px
+    }
+
+    #pco-host-wa .wa-head h2 {
+        font-size: clamp(32px, 4.3vw, 54px);
+        margin: 15px auto 17px !important
+    }
+
+    #pco-host-wa .wa-head p {
+        font-size: 15.5px !important;
+        margin: 9px auto !important;
+        max-width: 830px
+    }
+
+    #pco-host-wa .wa-kicker {
+        display: inline-flex;
+        align-items: center;
+        border-radius: 100px;
+        padding: 8px 16px;
+        font: 800 11px/1.4 'DM Sans', sans-serif;
+        color: #7750e9;
+        letter-spacing: .13em;
+        background: #fff;
+        border: 1px solid #ddceff;
+        box-shadow: 0 7px 20px #7648de14;
+        text-transform: uppercase
+    }
+
+    #pco-host-wa .wa-hero {
+        padding: 157px 0 88px;
+        background: radial-gradient(ellipse at 80% 23%, #d3c4ff9e, transparent 42%), radial-gradient(ellipse at 5% 78%, #c5e6ffc2, transparent 44%), linear-gradient(116deg, #f5faff, #f4efff 58%, #ffeffa)
+    }
+
+    #pco-host-wa .wa-hero-grid {
+        display: grid;
+        grid-template-columns: 1.04fr .96fr;
+        align-items: center;
+        gap: 55px
+    }
+
+    #pco-host-wa .wa-hero-copy {
+        min-width: 0;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important
+    }
+
+    #pco-host-wa .wa-hero h1 {
+        font-size: clamp(42px, 5.25vw, 75px);
+        margin: 20px 0 !important
+    }
+
+    #pco-host-wa .wa-hero p {
+        font-size: 16px !important
+    }
+
+    #pco-host-wa .wa-action {
+        margin-top: 27px
+    }
+
+    #pco-host-wa .wa-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 13px;
+        margin-top: 28px
+    }
+
+    #pco-host-wa .wa-btn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 52px;
+        padding: 12px 26px;
+        border-radius: 100px;
+        background: var(--grad);
+        border: 1px solid #9b83fa;
+        color: #fff !important;
+        font: 750 14px 'Outfit', sans-serif;
+        text-align: center;
+        box-shadow: 0 12px 27px #7657e741;
+        transition: transform .2s, box-shadow .2s
+    }
+
+    #pco-host-wa .wa-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 17px 35px #7657e755;
+        color: #fff !important
+    }
+
+    #pco-host-wa .wa-btn-secondary {
+        color: #7152dc !important;
+        background: #fff
+    }
+
+    #pco-host-wa .wa-btn-secondary:hover {
+        color: #7152dc !important
+    }
+
+    #pco-host-wa .wa-rules .wa-action a {
+        display: inline-flex;
+        padding: 12px 22px;
+        border-radius: 100px;
+        background: var(--grad);
+        color: #fff !important;
+        font-weight: 800
+    }
+
+    #pco-host-wa .wa-hero-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 25px
+    }
+
+    #pco-host-wa .wa-hero-chips span {
+        font-size: 12px;
+        font-weight: 750;
+        color: #6b4dc0;
+        background: #ffffffd9;
+        border: 1px solid #dfd4fc;
+        border-radius: 100px;
+        padding: 7px 11px
+    }
+
+    #pco-host-wa .wa-hero-visual {
+        height: 465px;
+        position: relative;
+        display: grid;
+        place-items: center;
+        background: radial-gradient(circle, #e1d4ff88, transparent 62%)
+    }
+
+    #pco-host-wa .wa-host-phone {
+        width: 290px;
+        max-width: 70%;
+        border: 9px solid #b7a5ff;
+        border-radius: 37px;
+        background: linear-gradient(144deg, #e8e6ff, #c6cbff, #f7c8ec);
+        padding: 15px;
+        box-shadow: 0 25px 60px #6150be55, 0 0 30px #bc67e93a;
+        transform: rotate(3deg)
+    }
+
+    #pco-host-wa .wa-phone-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        font: 800 14px 'Outfit', sans-serif;
+        color: #3b2a86
+    }
+
+    .wa-phone-bar strong span {
+        color: #ce49cb
+    }
+
+    #pco-host-wa .wa-live {
+        background: #d94fcf;
+        border-radius: 100px;
+        padding: 5px 9px;
+        font-size: 10px;
+        color: white
+    }
+
+    #pco-host-wa .wa-phone-screen {
+        height: 287px;
+        background: radial-gradient(circle at top, #f9ddf3, #dfd6ff 65%, #a6bbff);
+        border-radius: 22px;
+        margin: 15px 0;
+        padding: 22px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 8px
+    }
+
+    #pco-host-wa .wa-avatar {
+        height: 118px;
+        width: 118px;
+        display: grid;
+        place-items: center;
+        border-radius: 30px;
+        background: var(--grad);
+        font-size: 70px;
+        color: #fff;
+        box-shadow: 0 10px 26px #634dd64d
+    }
+
+    #pco-host-wa .wa-phone-screen strong {
+        font: 750 26px 'Outfit', sans-serif;
+        color: #25225b
+    }
+
+    #pco-host-wa .wa-phone-screen span {
+        font-size: 12px;
+        color: #6253a4;
+        font-weight: 800
+    }
+
+    #pco-host-wa .wa-phone-foot {
+        color: #5242a2;
+        font-size: 12px;
+        font-weight: 750;
+        text-align: center
+    }
+
+    #pco-host-wa .wa-float {
+        position: absolute;
+        background: #fffefef0;
+        border: 1px solid #d5c6ff;
+        border-radius: 19px;
+        padding: 13px 17px;
+        box-shadow: 0 12px 28px #5542ad27;
+        display: grid;
+        gap: 3px
+    }
+
+    .wa-float b {
+        font-size: 13px;
+        color: #5d3dc1
+    }
+
+    .wa-float small {
+        font-size: 11px;
+        color: #667095
+    }
+
+    #pco-host-wa .wa-float-a {
+        left: 1%;
+        top: 15%
+    }
+
+    #pco-host-wa .wa-float-b {
+        right: 0;
+        bottom: 15%
+    }
+
+    #pco-host-wa .wa-figure {
+        position: relative;
+        margin: 26px auto 30px;
+        padding: 13px;
+        border: 1.5px solid #dacffd;
+        border-radius: 26px;
+        background: linear-gradient(135deg, #f1f6ff, #fff4fc);
+        box-shadow: 0 12px 35px #6558bb21;
+        max-width: 100%
+    }
+
+    #pco-host-wa .wa-figure--role {
+        margin-bottom: 35px;
+        max-width: 1120px
+    }
+
+    #pco-host-wa .wa-image {
+        width: 100%;
+        position: relative;
+        border: 0 !important;
+        padding: 0 !important;
+        background: transparent !important;
+        cursor: zoom-in;
+        display: block
+    }
+
+    #pco-host-wa .wa-image img {
+        display: block;
+        width: 100%;
+        height: auto !important;
+        max-height: none !important;
+        object-fit: contain !important;
+        border-radius: 16px
+    }
+
+    #pco-host-wa .wa-zoom {
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+        color: #fff;
+        background: #202050c9;
+        padding: 8px 13px;
+        border-radius: 100px;
+        font-size: 12px;
+        font-weight: 750
+    }
+
+    #pco-host-wa figcaption {
+        color: #686089;
+        text-align: center;
+        font-size: 13px;
+        font-weight: 650;
+        margin: 12px auto 3px
+    }
+
+    #pco-host-wa .wa-features {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 17px
+    }
+
+    #pco-host-wa .wa-feature,
+    #pco-host-wa .wa-step,
+    #pco-host-wa .wa-panel,
+    #pco-host-wa .wa-stat,
+    #pco-host-wa .wa-faq {
+        min-width: 0;
+        border: 1.5px solid transparent;
+        border-radius: 24px;
+        background: linear-gradient(#fff, #fdfbff) padding-box, var(--grad) border-box;
+        box-shadow: 0 11px 32px #6655ac17
+    }
+
+    #pco-host-wa .wa-feature {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+        padding: 23px
+    }
+
+    #pco-host-wa .wa-feature-icon {
+        display: grid;
+        place-items: center;
+        flex: 0 0 44px;
+        width: 44px;
+        height: 44px;
+        background: var(--grad);
+        border-radius: 13px;
+        color: #fff
+    }
+
+    #pco-host-wa .wa-feature-icon svg {
+        width: 23px;
+        height: 23px
+    }
+
+    #pco-host-wa .wa-feature h3 {
+        font-size: 19px;
+        margin-bottom: 8px !important
+    }
+
+    #pco-host-wa .wa-feature p {
+        font-size: 13.5px !important
+    }
+
+    #pco-host-wa .wa-steps {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 17px;
+        margin: 26px 0 !important
+    }
+
+    #pco-host-wa .wa-step {
+        display: flex;
+        gap: 16px;
+        padding: 23px;
+        align-items: flex-start
+    }
+
+    #pco-host-wa .wa-stepnum {
+        display: grid;
+        place-items: center;
+        flex: 0 0 46px;
+        width: 46px;
+        height: 46px;
+        border-radius: 14px;
+        background: var(--grad);
+        font: 800 20px 'Outfit', sans-serif;
+        color: #fff;
+        box-shadow: 0 8px 20px #7851ea36
+    }
+
+    #pco-host-wa .wa-stepcopy {
+        min-width: 0
+    }
+
+    #pco-host-wa .wa-step h3 {
+        font-size: 18px;
+        margin: 2px 0 8px !important
+    }
+
+    #pco-host-wa .wa-step p {
+        font-size: 13.5px !important
+    }
+
+    #pco-host-wa .wa-panel {
+        padding: 29px;
+        margin: 0
+    }
+
+    #pco-host-wa .wa-panel h3 {
+        font-size: 24px;
+        margin-bottom: 15px !important
+    }
+
+    #pco-host-wa .wa-panel p {
+        margin-bottom: 15px !important
+    }
+
+    #pco-host-wa .wa-table-scroll {
+        max-width: 100%;
+        overflow: auto;
+        border-radius: 16px;
+        border: 1px solid #e4dcfa;
+        -webkit-overflow-scrolling: touch
+    }
+
+    #pco-host-wa table {
+        width: 100%;
+        min-width: 560px;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin: 0 !important;
+        font-size: 13.5px
+    }
+
+    #pco-host-wa table th {
+        background: var(--grad) !important;
+        color: #fff !important;
+        font-weight: 750 !important;
+        text-align: left;
+        padding: 16px !important;
+        border: 0 !important
+    }
+
+    #pco-host-wa table td {
+        border: 0 !important;
+        border-bottom: 1px solid #e8e2f8 !important;
+        padding: 15px 16px !important;
+        color: #344368 !important;
+        line-height: 1.55;
+        background: #fff
+    }
+
+    #pco-host-wa table tr:nth-child(even) td {
+        background: #f8f7ff
+    }
+
+    #pco-host-wa table tr:last-child td {
+        border-bottom: 0 !important
+    }
+
+    #pco-host-wa .wa-grid2 {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px
+    }
+
+    #pco-host-wa .wa-grid2 .wa-panel {
+        height: 100%
+    }
+
+    #pco-host-wa .wa-bullets {
+        display: grid;
+        gap: 10px;
+        padding: 0 !important;
+        margin: 17px 0 !important
+    }
+
+    #pco-host-wa .wa-bullets li {
+        position: relative;
+        list-style: none !important;
+        padding-left: 32px;
+        color: #4a5775;
+        font-size: 13.5px;
+        line-height: 1.75
+    }
+
+    #pco-host-wa .wa-bullets li:before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        top: 1px;
+        width: 23px;
+        height: 23px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: var(--grad);
+        color: #fff;
+        font-size: 12px;
+        font-weight: 800
+    }
+
+    #pco-host-wa .wa-notice {
+        margin-top: 20px
+    }
+
+    #pco-host-wa .wa-rewards>.wa-panel:last-child {
+        grid-column: 1/-1
+    }
+
+    #pco-host-wa .wa-panel-icon {
+        display: grid;
+        place-items: center;
+        background: var(--grad);
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+        color: #fff;
+        margin-bottom: 14px;
+        font-size: 25px
+    }
+
+    #pco-host-wa .wa-stat {
+        padding: 24px;
+        text-align: center;
+        display: grid;
+        gap: 6px
+    }
+
+    #pco-host-wa .wa-stat strong {
+        font: 800 32px 'Outfit', sans-serif;
+        color: #754de6
+    }
+
+    #pco-host-wa .wa-stat span {
+        font-weight: 800;
+        color: #2a3868
+    }
+
+    #pco-host-wa .wa-stat small {
+        color: #626d86;
+        font-size: 12px
+    }
+
+    #pco-host-wa .wa-stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 17px;
+        margin: 20px 0 30px
+    }
+
+    #pco-host-wa .wa-subtitle {
+        text-align: center;
+        margin: 38px 0 20px
+    }
+
+    #pco-host-wa .wa-subtitle h3 {
+        font-size: 27px
+    }
+
+    #pco-host-wa .wa-payout-info {
+        margin-bottom: 23px
+    }
+
+    #pco-host-wa .wa-faq-list {
+        display: grid;
+        gap: 14px;
+        max-width: 1000px;
+        margin: auto
+    }
+
+    #pco-host-wa .wa-faq {
+        overflow: hidden
+    }
+
+    #pco-host-wa .wa-faq summary {
+        display: flex;
+        gap: 18px;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 75px;
+        padding: 19px 23px;
+        cursor: pointer;
+        list-style: none;
+        font: 700 17px/1.5 'Outfit', sans-serif;
+        color: #1d2952
+    }
+
+    #pco-host-wa .wa-faq summary::-webkit-details-marker {
+        display: none
+    }
+
+    #pco-host-wa .wa-faq summary>span:first-child {
+        min-width: 0;
+        flex: 1
+    }
+
+    #pco-host-wa .wa-faqplus {
+        display: grid;
+        place-items: center;
+        flex: 0 0 38px;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        color: #fff;
+        background: var(--grad);
+        font: 800 26px 'DM Sans', sans-serif;
+        transition: transform .22s
+    }
+
+    #pco-host-wa .wa-faq[open] .wa-faqplus {
+        transform: rotate(45deg)
+    }
+
+    #pco-host-wa .wa-faqbody {
+        padding: 0 23px 22px
+    }
+
+    #pco-host-wa .wa-closing {
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto
+    }
+
+    #pco-host-wa .wa-closing h2 {
+        font-size: clamp(34px, 4.5vw, 59px);
+        margin: 19px auto !important
+    }
+
+    #pco-host-wa .wa-closing p {
+        font-size: 16px !important
+    }
+
+    #pco-host-wa :is(button, a, summary):focus-visible {
+        outline: 3px solid #7751ef;
+        outline-offset: 3px
+    }
+
+    .pco-host-lightbox[hidden] {
+        display: none !important
+    }
+
+    .pco-host-lightbox {
+        position: fixed !important;
+        inset: 0 !important;
+        z-index: 2147483647 !important;
+        background: #090c25ee;
+        backdrop-filter: blur(11px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 76px 20px 24px
+    }
+
+    .pco-host-lightbox img {
+        max-width: 100%;
+        max-height: calc(100dvh - 110px);
+        height: auto;
+        width: auto;
+        object-fit: contain;
+        border-radius: 12px;
+        box-shadow: 0 20px 60px #0007
+    }
+
+    .pco-host-lightbox .wa-close {
+        position: fixed !important;
+        top: calc(17px + env(safe-area-inset-top, 0px));
+        right: calc(19px + env(safe-area-inset-right, 0px));
+        display: grid;
+        place-items: center;
+        z-index: 2147483647 !important;
+        width: 47px;
+        height: 47px;
+        border: 1px solid #d5c2ff;
+        border-radius: 14px;
+        background: var(--grad, linear-gradient(110deg, #4c7dff, #7951ef, #d94fcf));
+        color: #fff;
+        font-size: 29px;
+        line-height: 1;
+        cursor: pointer
+    }
+
+    @media(max-width:1000px) {
+        #pco-host-wa .wa-hero-grid {
+            grid-template-columns: 1fr;
+            gap: 10px
+        }
+
+        #pco-host-wa .wa-hero-copy {
+            text-align: center
+        }
+
+        #pco-host-wa .wa-hero-chips {
+            justify-content: center
+        }
+
+        #pco-host-wa .wa-hero-visual {
+            max-width: 650px;
+            width: 100%;
+            margin: 0 auto
+        }
+
+        #pco-host-wa .wa-features {
+            grid-template-columns: repeat(2, minmax(0, 1fr))
+        }
+    }
+
+    @media(max-width:760px) {
+        #pco-host-wa .wa-container {
+            width: calc(100% - 32px)
+        }
+
+        #pco-host-wa .wa-section {
+            padding: 65px 0
+        }
+
+        #pco-host-wa .wa-hero {
+            padding: 130px 0 55px
+        }
+
+        #pco-host-wa .wa-steps,
+        #pco-host-wa .wa-grid2,
+        #pco-host-wa .wa-features {
+            grid-template-columns: 1fr
+        }
+
+        #pco-host-wa .wa-rewards>.wa-panel:last-child {
+            grid-column: auto
+        }
+
+        #pco-host-wa .wa-stats {
+            grid-template-columns: 1fr 1fr
+        }
+
+        #pco-host-wa .wa-head h2 {
+            font-size: clamp(30px, 7vw, 43px)
+        }
+
+        #pco-host-wa .wa-hero h1 {
+            font-size: clamp(40px, 8.5vw, 58px)
+        }
+
+        #pco-host-wa .wa-panel {
+            padding: 18px
+        }
+
+        #pco-host-wa .wa-figure {
+            padding: 9px
+        }
+    }
+
+    @media(max-width:460px) {
+        #pco-host-wa .wa-hero-visual {
+            height: 365px
+        }
+
+        #pco-host-wa .wa-host-phone {
+            width: 225px
+        }
+
+        #pco-host-wa .wa-phone-screen {
+            height: 210px;
+            padding: 12px
+        }
+
+        #pco-host-wa .wa-avatar {
+            height: 77px;
+            width: 77px;
+            font-size: 48px
+        }
+
+        #pco-host-wa .wa-phone-screen strong {
+            font-size: 20px
+        }
+
+        #pco-host-wa .wa-float {
+            padding: 9px 10px
+        }
+
+        #pco-host-wa .wa-float b {
+            font-size: 10px
+        }
+
+        #pco-host-wa .wa-float small {
+            font-size: 9px
+        }
+
+        #pco-host-wa .wa-float-a {
+            top: 11%;
+            left: 0
+        }
+
+        #pco-host-wa .wa-float-b {
+            right: 0;
+            bottom: 9%
+        }
+
+        #pco-host-wa .wa-stats {
+            grid-template-columns: 1fr
+        }
+
+        #pco-host-wa .wa-step {
+            padding: 17px;
+            gap: 12px
+        }
+
+        #pco-host-wa .wa-stepnum {
+            flex-basis: 41px;
+            width: 41px;
+            height: 41px
+        }
+
+        #pco-host-wa .wa-faq summary {
+            font-size: 15px;
+            padding: 17px
+        }
+
+        #pco-host-wa .wa-faqplus {
+            width: 34px;
+            height: 34px;
+            flex-basis: 34px
+        }
+
+        .pco-host-lightbox {
+            padding: 73px 12px 22px
+        }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+
+        #pco-host-wa *,
+        #pco-host-wa *:before,
+        #pco-host-wa *:after {
+            transition: none !important;
+            animation: none !important
+        }
+    }
+
+    /* V1.1 hero image and Elementor-safe preview controls */
+    #pco-host-wa .wa-hero-visual {
+        height: auto !important;
+        min-height: 0 !important;
+        display: block !important;
+        background: transparent !important;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    #pco-host-wa .wa-hero-art {
+        display: block;
+        width: 100%;
+        max-width: 650px;
+        margin: 0 auto !important;
+        padding: 10px;
+        border: 1px solid #d7c7ff;
+        border-radius: 28px;
+        background: linear-gradient(135deg, #f2f7ff, #f6eaff, #fff0fa);
+        box-shadow: 0 20px 50px rgba(88, 63, 174, .19);
+        overflow: hidden;
+    }
+
+    #pco-host-wa .wa-hero-art img {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+        object-fit: contain !important;
+        aspect-ratio: auto;
+        max-height: 590px;
+        border-radius: 20px;
+    }
+
+    .pco-host-lightbox {
+        box-sizing: border-box !important;
+        padding: calc(96px + env(safe-area-inset-top, 0px)) 18px 24px !important;
+    }
+
+    .pco-host-lightbox img {
+        display: block !important;
+        object-fit: contain !important;
+        width: auto !important;
+        height: auto !important;
+        max-width: min(1200px, calc(100vw - 38px)) !important;
+        max-height: calc(100dvh - 145px - env(safe-area-inset-top, 0px)) !important;
+    }
+
+    .pco-host-lightbox .wa-close {
+        position: fixed !important;
+        top: calc(20px + env(safe-area-inset-top, 0px)) !important;
+        right: calc(20px + env(safe-area-inset-right, 0px)) !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex: none !important;
+        width: 50px !important;
+        height: 50px !important;
+        min-width: 50px !important;
+        min-height: 50px !important;
+        line-height: 1 !important;
+        border: 2px solid rgba(255, 255, 255, .9) !important;
+        border-radius: 50% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background: linear-gradient(135deg, #4c7dff, #7951ef 55%, #d94fcf) !important;
+        color: #fff !important;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, .4) !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        cursor: pointer !important;
+        z-index: 2147483647 !important;
+    }
+
+    .pco-host-lightbox .wa-close svg {
+        display: block !important;
+        flex: none !important;
+        width: 23px !important;
+        height: 23px !important;
+        stroke: #fff !important;
+        stroke-width: 2.8 !important;
+        stroke-linecap: round !important;
+        fill: none !important;
+        pointer-events: none !important;
+    }
+
+    .pco-host-lightbox .wa-close:hover {
+        filter: brightness(1.12);
+    }
+
+    @media(max-width:760px) {
+        #pco-host-wa .wa-hero-art {
+            max-width: 600px;
+            padding: 7px;
+            border-radius: 23px
+        }
+
+        #pco-host-wa .wa-hero-art img {
+            border-radius: 17px
+        }
+    }
+
+    @media(max-width:460px) {
+        #pco-host-wa .wa-hero-visual {
+            height: auto !important
+        }
+
+        .pco-host-lightbox {
+            padding: calc(82px + env(safe-area-inset-top, 0px)) 10px 20px !important
+        }
+
+        .pco-host-lightbox .wa-close {
+            width: 46px !important;
+            min-width: 46px !important;
+            height: 46px !important;
+            min-height: 46px !important;
+            top: calc(14px + env(safe-area-inset-top, 0px)) !important;
+            right: calc(14px + env(safe-area-inset-right, 0px)) !important
+        }
+
+        .pco-host-lightbox img {
+            max-height: calc(100dvh - 116px - env(safe-area-inset-top, 0px)) !important
+        }
+    }
+
+    /* Host Step Card Deck (Stacked Cards) */
+    #pco-host-wa .host-step-deck {
+        position: relative;
+        padding: 0 !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        margin: 20px auto 0 !important;
+        max-width: 600px !important;
+        width: 100% !important;
+        overflow: visible !important;
+    }
+
+    #pco-host-wa .deck-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding-right: 22px;
+        padding-bottom: 34px;
+        box-sizing: border-box;
+    }
+
+    #pco-host-wa .deck-stack {
+        position: relative;
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    #pco-host-wa .deck-sizer {
+        visibility: hidden;
+        pointer-events: none;
+        width: 100%;
+        display: block;
+        user-select: none;
+    }
+
+    #pco-host-wa .deck-sizer img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    #pco-host-wa .deck-card {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+        background: #fff;
+        border: 1px solid rgba(220, 222, 235, .95);
+        cursor: pointer;
+        box-sizing: border-box;
+        transition: transform .42s cubic-bezier(0.25, 1, 0.5, 1), opacity .42s ease, box-shadow .42s ease, filter .42s ease;
+        user-select: none;
+        -webkit-user-select: none;
+        will-change: transform, opacity;
+    }
+
+    /* Stack Position 0: Front active card */
+    #pco-host-wa .deck-card.pos-0 {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+        z-index: 10;
+        opacity: 1;
+        pointer-events: auto;
+        box-shadow: 0 16px 38px rgba(0, 0, 0, .42);
+        filter: brightness(1);
+    }
+
+    /* Stack Position 1: 1st card behind */
+    #pco-host-wa .deck-card.pos-1 {
+        transform: translate3d(6px, 9px, 0) rotate(1.2deg);
+        z-index: 9;
+        opacity: 1;
+        pointer-events: none;
+        background: #F6F4FC;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, .32);
+        filter: brightness(.96);
+    }
+
+    /* Stack Position 2: 2nd card behind */
+    #pco-host-wa .deck-card.pos-2 {
+        transform: translate3d(12px, 18px, 0) rotate(2.4deg);
+        z-index: 8;
+        opacity: 1;
+        pointer-events: none;
+        background: #EDE8F8;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, .25);
+        filter: brightness(.92);
+    }
+
+    /* Stack Position 3: 3rd card behind */
+    #pco-host-wa .deck-card.pos-3 {
+        transform: translate3d(18px, 27px, 0) rotate(3.6deg);
+        z-index: 7;
+        opacity: 1;
+        pointer-events: none;
+        background: #E1DBF2;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, .2);
+        filter: brightness(.88);
+    }
+
+    /* Card sliding out to the left when advancing */
+    #pco-host-wa .deck-card.is-sliding-out {
+        transform: translate3d(-108%, 18px, 0) rotate(-8deg) !important;
+        opacity: 0 !important;
+        transition: transform .32s cubic-bezier(0.3, 0, 0.2, 1), opacity .32s ease !important;
+    }
+
+    #pco-host-wa .deck-card__inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #pco-host-wa .deck-card__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 20px;
+    }
+
+    /* Pill buttons on the card */
+    #pco-host-wa .deck-btn {
+        position: absolute !important;
+        bottom: 16px !important;
+        z-index: 25 !important;
+        width: auto !important;
+        max-width: max-content !important;
+        padding: 7px 15px !important;
+        border-radius: 999px !important;
+        background: #181920 !important;
+        border: 1px solid rgba(255, 255, 255, .2) !important;
+        color: #fff !important;
+        font: 600 12px/1.2 'DM Sans', -apple-system, sans-serif !important;
+        letter-spacing: .15px;
+        cursor: pointer;
+        display: inline-flex !important;
+        align-items: center;
+        gap: 6px;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, .35) !important;
+        transition: background .2s ease, transform .2s ease, border-color .2s ease, box-shadow .2s ease !important;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        white-space: nowrap !important;
+        box-sizing: border-box !important;
+    }
+
+    #pco-host-wa .deck-btn:hover {
+        background: #FE2C55 !important;
+        border-color: #FE2C55 !important;
+        color: #fff !important;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(254, 44, 85, .42) !important;
+    }
+
+    #pco-host-wa .deck-btn:active {
+        transform: translateY(0);
+    }
+
+    #pco-host-wa .deck-btn--next {
+        left: 16px !important;
+        right: auto !important;
+    }
+
+    #pco-host-wa .deck-btn--zoom {
+        right: 16px !important;
+        left: auto !important;
+        cursor: zoom-in;
+    }
+
+    /* Navigation dots under the deck */
+    #pco-host-wa .deck-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 14px;
+    }
+
+    #pco-host-wa .deck-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(121, 81, 239, .35);
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    #pco-host-wa .deck-dot:hover:not(.is-active) {
+        background: rgba(121, 81, 239, .75);
+    }
+
+    #pco-host-wa .deck-dot.is-active {
+        width: 32px;
+        border-radius: 999px;
+        background: #FE2C55;
+        box-shadow: 0 0 12px rgba(254, 44, 85, .55);
+    }
+
+    #pco-host-wa .deck-caption {
+        margin-top: 10px !important;
+        color: var(--body, #56617e) !important;
+        font-size: 13.5px;
+        line-height: 1.72 !important;
+        text-align: center;
+    }
+
+    @media (max-width: 640px) {
+        #pco-host-wa .deck-wrapper {
+            padding-right: 18px;
+            padding-bottom: 28px;
+        }
+
+        #pco-host-wa .deck-card.pos-1 {
+            transform: translate3d(5px, 8px, 0) rotate(1.2deg);
+        }
+
+        #pco-host-wa .deck-card.pos-2 {
+            transform: translate3d(10px, 16px, 0) rotate(2.4deg);
+        }
+
+        #pco-host-wa .deck-card.pos-3 {
+            transform: translate3d(15px, 24px, 0) rotate(3.6deg);
+        }
+
+        #pco-host-wa .deck-btn {
+            bottom: 12px;
+            padding: 7px 12px;
+            font-size: 11.5px !important;
+        }
+
+        #pco-host-wa .deck-btn--next {
+            left: 12px;
+        }
+
+        #pco-host-wa .deck-btn--zoom {
+            right: 12px;
+        }
+    }
+</style>
+<div id="pco-host-wa">
+    <section class="wa-hero">
+        <div class="wa-container wa-hero-grid">
+            <div class="wa-hero-copy">
+                <span class="wa-kicker">✦ HOST COOPERATION</span>
+                <h1>Build Your Presence, Grow Your Audience, Own Your Stream</h1>
+                <p class="lead host-hero__sub">Become an official <strong>Poppo Live Host</strong> and explore your
+                    potential through livestreaming, even if you are a beginner. Receive platform guidance and mentoring
+                    from experienced agent partners, grow your <strong>Personality</strong>, and enjoy a transparent
+                    revenue-sharing system with up to <strong>70%</strong> Host revenue share opportunities. </p>
+                <div class="wa-action">
+                    <a class="wa-btn" href="https://invite-poppo.com/jRAjCs">Free Register as Host</a>
+                </div>
+                <div class="wa-hero-chips">
+                    <span>✦ Live Streaming</span>
+                    <span>✦ Community</span>
+                    <span>✦ Creator Rewards</span>
+                </div>
+            </div>
+            <div class="wa-hero-visual" aria-label="Poppo Live Host livestreaming illustration">
+                <figure class="wa-hero-art">
+                    <img src="data:image/webp;base64,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"
+                        width="790" height="932" loading="eager" decoding="async"
+                        alt="Smiling female livestream host wearing a modest high-neck lavender top in a live-streaming studio, White Aurora style">
+                </figure>
+            </div>
+        </div>
+    </section>
+    <section class="wa-section wa-section--tint" id="host-overview">
+        <div class="wa-container">
+            <header class="wa-head">
+                <span class="wa-kicker">✦ HOST OPPORTUNITIES</span>
+                <h2>What You Can Do as a Poppo Live Host</h2>
+                <p class="lead host-overview__lead">As a Poppo Live Host, you can start your live streaming journey with
+                    real-time broadcasts and receive mentoring and training support from experienced Agents to improve
+                    your streaming skills and grow on the platform.</p>
+                <p class="lead host-overview__lead">As a Host, you can access interactive livestream features such as PK
+                    Battles, Party Rooms, and private chat to connect with viewers worldwide. Your main earnings come
+                    from viewer gifts converted into Gift Points, while additional bonus and reward opportunities are
+                    available through consistent activities, platform tasks, and Top Live achievements to help you grow
+                    your Host profile and reach a wider global audience.</p>
+            </header>
+            <figure class="wa-figure wa-figure--role">
+                <button class="wa-image" type="button" aria-label="Open image preview">
+                    <img src="https://poppolive.co/wp-content/uploads/2026/11/Poppo-Host-Role.png"
+                        alt="Poppo Live Host Role infographic" loading="lazy" decoding="async">
+                    <span class="wa-zoom">⌕ View full image</span>
+                </button>
+                <figcaption>Poppo Live Host Role — Stream, Interact & Earn</figcaption>
+            </figure>
+            <div class="wa-features">
+                <article class="wa-feature">
+                    <span class="wa-feature-icon">
+                        <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"></path>
+                            <rect height="12" rx="2" width="14" x="2" y="6"></rect>
+                        </svg>
+                    </span>
+                    <div>
+                        <h3>Live Streaming</h3>
+                        <p class="host-overview__card-desc">Go live, share your moments, and connect with viewers
+                            through interactive livestream experiences.</p>
+                    </div>
+                </article>
+                <article class="wa-feature">
+                    <span class="wa-feature-icon">
+                        <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5"></polyline>
+                            <line x1="13" x2="19" y1="19" y2="13"></line>
+                            <line x1="16" x2="20" y1="16" y2="20"></line>
+                            <line x1="19" x2="21" y1="21" y2="19"></line>
+                            <polyline points="14.5 6.5 18 3 21 3 21 6 17.5 9.5"></polyline>
+                            <line x1="5" x2="9" y1="14" y2="18"></line>
+                            <line x1="7" x2="4" y1="17" y2="20"></line>
+                            <line x1="3" x2="5" y1="19" y2="21"></line>
+                        </svg>
+                    </span>
+                    <div>
+                        <h3>PK Battle</h3>
+                        <p class="host-overview__card-desc">Challenge other Hosts in exciting live battles, increase
+                            engagement, and create more entertaining moments for your audience.</p>
+                    </div>
+                </article>
+                <article class="wa-feature">
+                    <span class="wa-feature-icon">
+                        <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect height="18" rx="2" width="18" x="3" y="3"></rect>
+                            <path d="m9 12 2 2 4-4"></path>
+                        </svg>
+                    </span>
+                    <div>
+                        <h3>Complete Daily Task &amp; Task Level</h3>
+                        <p class="host-overview__card-desc">Complete platform tasks, achieve higher task levels, and
+                            unlock more opportunities to grow your Host journey.</p>
+                    </div>
+                </article>
+                <article class="wa-feature">
+                    <span class="wa-feature-icon">
+                        <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                            <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                        </svg>
+                    </span>
+                    <div>
+                        <h3>Join or Create Party Room</h3>
+                        <p class="host-overview__card-desc">Join conversations or create your own Party Room to interact
+                            with multiple Host and build stronger communities.</p>
+                    </div>
+                </article>
+                <article class="wa-feature">
+                    <span class="wa-feature-icon">
+                        <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 9.4a4 4 0 1 0 0 5.2"></path>
+                            <path d="M7 12h5"></path>
+                            <circle cx="12" cy="12" r="10"></circle>
+                        </svg>
+                    </span>
+                    <div>
+                        <h3>Earn 70% Gift Share</h3>
+                        <p class="host-overview__card-desc">Receive up to 70% Gift Share from viewer gifts and turn your
+                            livestream into earning opportunities.</p>
+                    </div>
+                </article>
+                <article class="wa-feature">
+                    <span class="wa-feature-icon">
+                        <svg aria-hidden="true" height="24" viewbox="0 0 32 32" width="24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M18.21,32H7.79A4.8,4.8,0,0,1,3,27.21V4.79A4.8,4.8,0,0,1,7.79,0H18.21A4.8,4.8,0,0,1,23,4.79V5a1,1,0,0,1-2,0V4.79A2.79,2.79,0,0,0,18.21,2H7.79A2.79,2.79,0,0,0,5,4.79V27.21A2.79,2.79,0,0,0,7.79,30H18.21A2.79,2.79,0,0,0,21,27.21V27a1,1,0,0,1,2,0v.21A4.8,4.8,0,0,1,18.21,32Z"
+                                fill="currentColor"></path>
+                            <path d="M13,28a2,2,0,1,1,2-2A2,2,0,0,1,13,28Zm0-2Z" fill="currentColor" opacity="0.55">
+                            </path>
+                            <path d="M16,6H10a1,1,0,0,1,0-2h6a1,1,0,0,1,0,2Z" fill="currentColor"></path>
+                            <path
+                                d="M22,24a8,8,0,0,1-5.29-2H14a1,1,0,0,1-.89-1.45l1.19-2.39A7.93,7.93,0,0,1,14,16a8,8,0,1,1,8,8Zm-6.38-4h1.49a.94.94,0,0,1,.69.29A6,6,0,1,0,16,16a6.1,6.1,0,0,0,.32,1.93,1,1,0,0,1-.05.77Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M24,15H23V14a1,1,0,0,0-2,0v1H20a1,1,0,0,0,0,2h1v1a1,1,0,0,0,2,0V17h1a1,1,0,0,0,0-2Z"
+                                fill="currentColor" opacity="0.55"></path>
+                        </svg>
+                    </span>
+                    <div>
+                        <h3>1 on 1 Chat Message (Private Chat &amp; Group Chat) </h3>
+                        <p class="host-overview__card-desc">Build closer connections with anyone through private chat
+                            and or group chat in a more chill experience.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section class="wa-section " id="host-register">
+        <div class="wa-container">
+            <header class="wa-head">
+                <span class="wa-kicker">✦ GETTING STARTED</span>
+                <h2>How to Register as Poppo Live Host</h2>
+                <p class="lead">Become a Poppo Live Host easily by downloading the app, completing your registration,
+                    and joining through an official Agent invitation.</p>
+            </header>
+            <ol class="wa-steps">
+                <li class="wa-step">
+                    <span class="wa-stepnum">1</span>
+                    <div class="wa-stepcopy">
+                        <h3>Download Poppo Live app</h3>
+                        <p class="host-init__step-desc">Download via Android or iOS using our <a
+                                href="https://invite-poppo.com/jRAjCs" rel="noopener noreferrer"
+                                target="_blank">official registration link</a>. </p>
+                    </div>
+                </li>
+                <li class="wa-step">
+                    <span class="wa-stepnum">2</span>
+                    <div class="wa-stepcopy">
+                        <h3>Create your Poppo Live account</h3>
+                        <p class="host-init__step-desc">Complete your profile with Nickname, Date of birth, Country,
+                            Gender. </p>
+                    </div>
+                </li>
+                <li class="wa-step">
+                    <span class="wa-stepnum">3</span>
+                    <div class="wa-stepcopy">
+                        <h3>Go to profile and open My agent</h3>
+                        <p class="host-init__step-desc">Open your profile menu and tap My agent to continue the agency
+                            join process.</p>
+                    </div>
+                </li>
+                <li class="wa-step">
+                    <span class="wa-stepnum">4</span>
+                    <div class="wa-stepcopy">
+                        <h3>Enter your agent ID and submit</h3>
+                        <p class="host-init__step-desc">Enter Referral ID (use <strong>4345306</strong>) the agent ID
+                            that invited you, then click Submit to join
+                            the agency.</p>
+                    </div>
+                </li>
+            </ol>
+            <figure class="wa-figure host-step-deck" id="host-step-deck">
+                <div class="deck-wrapper">
+                    <div class="deck-stack">
+                        <!-- Sizer to naturally reserve exact image aspect ratio across all devices -->
+                        <div aria-hidden="true" class="deck-sizer">
+                            <img alt=""
+                                src="https://poppolive.co/wp-content/uploads/2026/11/Poppo-Host-Registration-Step-1.png" />
+                        </div>
+
+                        <!-- Card 1 -->
+                        <div class="deck-card pos-0 is-active" data-index="0"
+                            data-caption="Step 1 of 4: Download Poppo Live app. Click photo for next or Zoom to enlarge.">
+                            <div class="deck-card__inner">
+                                <img alt="Poppo Host Registration Step 1" class="deck-card__img" loading="lazy"
+                                    src="https://poppolive.co/wp-content/uploads/2026/11/Poppo-Host-Registration-Step-1.png" />
+                                <button aria-label="Next photo" class="deck-btn deck-btn--next" type="button">
+                                    <span>Click photo for next</span>
+                                    <span aria-hidden="true">→</span>
+                                </button>
+                                <button aria-label="Zoom photo" class="deck-btn deck-btn--zoom" type="button">
+                                    <span>Zoom</span>
+                                    <span aria-hidden="true">↗</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="deck-card pos-1" data-index="1"
+                            data-caption="Step 2 of 4: Create your Poppo Live account. Click photo for next or Zoom to enlarge.">
+                            <div class="deck-card__inner">
+                                <img alt="Poppo Host Registration Step 2" class="deck-card__img" loading="lazy"
+                                    src="https://poppolive.co/wp-content/uploads/2026/11/Poppo-Host-Registration-Step-2.png" />
+                                <button aria-label="Next photo" class="deck-btn deck-btn--next" type="button">
+                                    <span>Click photo for next</span>
+                                    <span aria-hidden="true">→</span>
+                                </button>
+                                <button aria-label="Zoom photo" class="deck-btn deck-btn--zoom" type="button">
+                                    <span>Zoom</span>
+                                    <span aria-hidden="true">↗</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="deck-card pos-2" data-index="2"
+                            data-caption="Step 3 of 4: Go to profile and open My agent. Click photo for next or Zoom to enlarge.">
+                            <div class="deck-card__inner">
+                                <img alt="Poppo Host Registration Step 3" class="deck-card__img" loading="lazy"
+                                    src="https://poppolive.co/wp-content/uploads/2026/11/Poppo-Host-Registration-Step-3.png" />
+                                <button aria-label="Next photo" class="deck-btn deck-btn--next" type="button">
+                                    <span>Click photo for next</span>
+                                    <span aria-hidden="true">→</span>
+                                </button>
+                                <button aria-label="Zoom photo" class="deck-btn deck-btn--zoom" type="button">
+                                    <span>Zoom</span>
+                                    <span aria-hidden="true">↗</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="deck-card pos-3" data-index="3"
+                            data-caption="Step 4 of 4: Enter your agent ID and submit. Click photo for next or Zoom to enlarge.">
+                            <div class="deck-card__inner">
+                                <img alt="Poppo Host Registration Step 4" class="deck-card__img" loading="lazy"
+                                    src="https://poppolive.co/wp-content/uploads/2026/11/Poppo-Host-Registration-Step-4.png" />
+                                <button aria-label="Next photo" class="deck-btn deck-btn--next" type="button">
+                                    <span>Click photo for next</span>
+                                    <span aria-hidden="true">→</span>
+                                </button>
+                                <button aria-label="Zoom photo" class="deck-btn deck-btn--zoom" type="button">
+                                    <span>Zoom</span>
+                                    <span aria-hidden="true">↗</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Dots -->
+                    <div aria-label="Host registration steps navigation" class="deck-nav" role="tablist">
+                        <button aria-label="Step 1" aria-selected="true" class="deck-dot is-active" data-index="0"
+                            role="tab" type="button"></button>
+                        <button aria-label="Step 2" aria-selected="false" class="deck-dot" data-index="1" role="tab"
+                            type="button"></button>
+                        <button aria-label="Step 3" aria-selected="false" class="deck-dot" data-index="2" role="tab"
+                            type="button"></button>
+                        <button aria-label="Step 4" aria-selected="false" class="deck-dot" data-index="3" role="tab"
+                            type="button"></button>
+                    </div>
+
+                    <figcaption class="deck-caption">Step 1 of 4: Download Poppo Live app. Click photo for next or Zoom
+                        to enlarge.</figcaption>
+                </div>
+            </figure>
+        </div>
+    </section>
+    <section class="wa-section wa-section--tint" id="host-commission">
+        <div class="wa-container">
+            <header class="wa-head">
+                <span class="wa-kicker">✦ HOST EARNINGS</span>
+                <h2>Host Commission</h2>
+                <p class="lead">Host earnings come from live streaming activities including gifts, party, chat
+                    interactions, tasks, bonuses, and ranking rewards, supported by a transparent real-time
+                    Points-to-USD conversion system.</p>
+            </header>
+            <div class="wa-panel">
+                <h3>Salary Chart</h3>
+                <div class="wa-table-scroll">
+                    <table aria-label="Points to USD conversion salary chart" class="data-table host-salary__table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Points Accumulated</th>
+                                <th scope="col">Points to USD Conversion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="mono">10,000 Points</td>
+                                <td class="mono">$1</td>
+                            </tr>
+                            <tr>
+                                <td class="mono">100,000 Points</td>
+                                <td class="mono">$10</td>
+                            </tr>
+                            <tr>
+                                <td class="mono">200,000 Points</td>
+                                <td class="mono">$20</td>
+                            </tr>
+                            <tr>
+                                <td class="mono">500,000 Points</td>
+                                <td class="mono">$50</td>
+                            </tr>
+                            <tr>
+                                <td class="mono">1,000,000 Points</td>
+                                <td class="mono">$100</td>
+                            </tr>
+                            <tr>
+                                <td class="mono">5,000,000 Points</td>
+                                <td class="mono">$500</td>
+                            </tr>
+                            <tr>
+                                <td class="mono">10,000,000 Points</td>
+                                <td class="mono">$1000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <ul class="wa-bullets">
+                    <li>The minimum withdrawal requirement is <strong>$10</strong> or <strong>100.000 Points</strong>
+                    </li>
+                    <li>The withdrawal amount must be the multiple of <strong>10</strong> (e.g. 10, 20, 50, 500), the
+                        remainder will stay in your wallet </li>
+                    <li>The process may take up to <strong>7-business days</strong>
+                    </li>
+                    <li>Withdrawal method availability varies for each region</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="wa-section " id="host-tasks-heading">
+        <div class="wa-container">
+            <header class="wa-head">
+                <span class="wa-kicker">✦ TASK & LEVEL SYSTEM</span>
+                <h2>Host Task &amp; Reward Level System</h2>
+                <p class="lead">This section explains the structured host system based on 7-day performance tracking,
+                    task levels, and reward differences between new hosts and existing hosts within the platform.</p>
+            </header>
+            <div class="wa-panel">
+                <h3>Level Task</h3>
+                <div class="wa-table-scroll">
+                    <table aria-label="Host level task matrix" class="data-table host-tasks__table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Tier</th>
+                                <th scope="col">Rolling 7-Day Yield</th>
+                                <th scope="col">Hourly Task Injection</th>
+                                <th scope="col">Max Daily Limit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="mono tier-s">S</td>
+                                <td class="mono tier-s">50,000,000 Points</td>
+                                <td class="mono tier-s">70,000 Points/H</td>
+                                <td class="mono tier-s">4H/Day</td>
+                            </tr>
+                            <tr>
+                                <td class="mono">A</td>
+                                <td class="mono">22,000,000 Points</td>
+                                <td class="mono">50,000 Points/H</td>
+                                <td class="mono">4H/Day</td>
+                            </tr>
+                            <tr>
+                                <td class="mono">B</td>
+                                <td class="mono">10,000,000 Points</td>
+                                <td class="mono">40,000 Points/H</td>
+                                <td class="mono">3H/Day</td>
+                            </tr>
+                            <tr>
+                                <td class="mono">C</td>
+                                <td class="mono">7,000,000 Points</td>
+                                <td class="mono">35,000 Points/H</td>
+                                <td class="mono">3H/Day</td>
+                            </tr>
+                            <tr>
+                                <td class="mono">D</td>
+                                <td class="mono">4,000,000 Points</td>
+                                <td class="mono">28,000 Points/H</td>
+                                <td class="mono">3H/Day</td>
+                            </tr>
+                            <tr>
+                                <td class="mono">E</td>
+                                <td class="mono">2,000,000 Points</td>
+                                <td class="mono">18,000 Points/H</td>
+                                <td class="mono">3H/Day</td>
+                            </tr>
+                            <tr>
+                                <td class="mono">F</td>
+                                <td class="mono">1,200,000 Points</td>
+                                <td class="mono">12,000 Points/H</td>
+                                <td class="mono">3H/Day</td>
+                            </tr>
+                            <tr>
+                                <td class="mono">G</td>
+                                <td class="mono">900,000 Points</td>
+                                <td class="mono">9,000 Points/H</td>
+                                <td class="mono">3H/Day</td>
+                            </tr>
+                            <tr>
+                                <td class="mono">H</td>
+                                <td class="mono">300,000 Points</td>
+                                <td class="mono">5,000 Points/H</td>
+                                <td class="mono">2H/Day</td>
+                            </tr>
+                            <tr>
+                                <td class="mono">I</td>
+                                <td class="mono">150,000 Points</td>
+                                <td class="mono">3,000 Points/H</td>
+                                <td class="mono">2H/Day</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <ul class="wa-bullets">
+                    <li>Your daily task level is based on your total livestream income from the past <strong>7
+                            days</strong>, not just your earnings from a single day. </li>
+                    <li>The 7-day period follows a <strong>rolling system</strong>, meaning it always includes today and
+                        the previous 6 days, and updates every day. </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="wa-section wa-section--tint" id="host-categories">
+        <div class="wa-container">
+            <header class="wa-head">
+                <span class="wa-kicker">✦ HOST CATEGORIES</span>
+                <h2>New &amp; Ordinary Host</h2>
+            </header>
+            <div class="wa-grid2">
+                <article class="wa-panel">
+                    <h3>New Host</h3>
+                    <p class="host-protection-section__card-desc">Hosts who have registered within their first 7 days
+                        can enjoy a special protection period with higher daily task rewards.</p>
+                    <div class="wa-table-scroll">
+                        <table aria-label="New host task rewards" class="data-table host-protection-section__table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Target</th>
+                                    <th scope="col">Hourly Injection</th>
+                                    <th scope="col">Max Limit</th>
+                                    <th scope="col">Validity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>New Register Host</td>
+                                    <td class="mono">10,000 Points/H</td>
+                                    <td class="mono">2H/Day</td>
+                                    <td class="mono">7 Days</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+                <article class="wa-panel">
+                    <h3>Ordinary Host</h3>
+                    <p class="host-protection-section__card-desc">Hosts who are no longer within the first 7 days of
+                        registration and have earned below $15 in the past 7 days will receive regular task rewards
+                        based on their livestream activity.</p>
+                    <div class="wa-table-scroll">
+                        <table aria-label="Ordinary host task rewards"
+                            class="data-table host-protection-section__table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Target</th>
+                                    <th scope="col">Hourly Injection</th>
+                                    <th scope="col">Max Limit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ordinary Host</td>
+                                    <td class="mono">1,000 Points/H</td>
+                                    <td class="mono">1H/Day</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+            </div>
+            <div class="wa-panel wa-notice">
+                <h3>Compliance Notice</h3>
+                <ul class="wa-bullets">
+                    <li>All task rewards are <strong>Points</strong>. </li>
+                    <li>Income includes live income and party income (Income of Join Party and Watch Live will be
+                        included too, not including platform reward).</li>
+                    <li>On the day when the income reaches the target, a new live broadcast task will be automatically
+                        displayed.</li>
+                    <li>Hosts who have registered multiple accounts, and those who log in with multiple IPs and multiple
+                        devices will be excluded from all tasks.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="wa-section " id="host-rewards">
+        <div class="wa-container">
+            <header class="wa-head">
+                <span class="wa-kicker">✦ BONUSES & REWARDS</span>
+                <h2>Host Rewards from Live Streaming Activities</h2>
+                <p class="lead">As a Host, you can receive different types of rewards from your live streaming activity,
+                    including rankings, daily tasks, live engagement programs, and platform-based reward systems
+                    designed to support your overall performance.</p>
+            </header>
+            <div class="wa-grid2 wa-rewards">
+                <article class="wa-panel wa-reward">
+                    <span class="wa-panel-icon">✦</span>
+                    <h3>Host - Hourly Salary Reward</h3>
+                    <p class="lead">Complete daily live tasks to claim hourly salary rewards based on your host level
+                        and streaming performance.</p>
+                    <ul class="wa-bullets">
+                        <li>Weekly Host hourly salary reward around <strong>100USD-300USD</strong>. </li>
+                        <li>Portal 1 via Home -&gt; Reward, Portal 2 via Live Room.</li>
+                        <li>Level up rules: <a href="#host-tasks-heading">Click here</a> to check the detailed task
+                            rewards. </li>
+                        <li>The redemption period is in <strong>24hours</strong>, need to manually claim on the same day
+                            when a task has been achieved. (UTC+8) </li>
+                    </ul>
+                </article>
+                <article class="wa-panel wa-reward">
+                    <span class="wa-panel-icon">✦</span>
+                    <h3>Host - Ranking Reward</h3>
+                    <p class="lead">Compete on daily host rankings to earn additional platform rewards from your live
+                        and party gift performance.</p>
+                    <ul class="wa-bullets">
+                        <li>Daily Host ranking is calculated from Monday to Thursday</li>
+                        <li>Ranking is determined based on the Live &amp; Party gift earnings on the same day</li>
+                        <li>Platform rewards are excluded</li>
+                        <li>A minimum of <strong>1 hour</strong> live stream is required to qualify each day. </li>
+                    </ul>
+                </article>
+                <article class="wa-panel wa-reward">
+                    <span class="wa-panel-icon">✦</span>
+                    <h3>Poppo Live Coin Recharge System</h3>
+                    <p class="lead">Understand how Poppo Live coins convert to USD value and how offline recharge can
+                        offer better rates through verified coin sellers.</p>
+                    <div class="wa-table-scroll">
+                        <table aria-label="Coin to USD recharge rate" class="data-table host-reward__coin-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">COINS</th>
+                                    <th scope="col">USD</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>= 7000 (due to the difference of taxes across regions)</td>
+                                    <td class="mono">1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="host-reward__note">* <strong>Offline coin recharge can get up to 1USD=9500 Coins</strong>,
+                        asking trader or admins for more details </p>
+                    <ul class="wa-bullets">
+                        <li>Only Agent can register as a coin seller</li>
+                        <li>Coin Seller offers a cheaper Coin recharge value</li>
+                        <li>
+                            <a href="/contact-us/">Contact us</a> for more information regarding Coin Seller
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section class="wa-section wa-section--tint" id="host-verification">
+        <div class="wa-container">
+            <header class="wa-head">
+                <span class="wa-kicker">✦ FACE VERIFICATION</span>
+                <h2>How To Complete Face Verification for Host</h2>
+                <p class="lead">Face verification is required to access Host features such as live streaming. Make sure
+                    you use your Host account and follow the instructions shown inside the app.</p>
+            </header>
+            <ol class="wa-steps">
+                <li class="wa-step">
+                    <span class="wa-stepnum">1</span>
+                    <div class="wa-stepcopy">
+                        <h3>Open the Poppo Live App</h3>
+                        <p class="host-verify__step-desc">Go to the homepage. Tap the ‘Live’ button, this takes you
+                            straight into the face verification step.</p>
+                    </div>
+                </li>
+                <li class="wa-step">
+                    <span class="wa-stepnum">2</span>
+                    <div class="wa-stepcopy">
+                        <h3>Upload a Photo of Yourself</h3>
+                        <p class="host-verify__step-desc">You’ll need to provide a recent, well-lit photo where your
+                            face is clearly visible. Confirm it once you’re satisfied, and you’ll move to the next stage
+                        </p>
+                    </div>
+                </li>
+                <li class="wa-step">
+                    <span class="wa-stepnum">3</span>
+                    <div class="wa-stepcopy">
+                        <h3>Begin the Live Verification</h3>
+                        <p class="host-verify__step-desc">Tap ‘Start to Certificate’ to enter the real-time verification
+                            stage.</p>
+                    </div>
+                </li>
+                <li class="wa-step">
+                    <span class="wa-stepnum">4</span>
+                    <div class="wa-stepcopy">
+                        <h3>Follow the On-Screen Instructions</h3>
+                        <ul class="wa-bullets">
+                            <li>Make sure you are in a well-lit room (avoid backlighting)</li>
+                            <li>Remove hats, glasses, masks, or accessories that cover your face</li>
+                            <li>Use the front camera in clear conditions</li>
+                            <li>Take a selfie or record a short video on demand</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="wa-step">
+                    <span class="wa-stepnum">5</span>
+                    <div class="wa-stepcopy">
+                        <h3>Submit and Check Back for Results</h3>
+                        <ul class="wa-bullets">
+                            <li>The verification process can take up to <strong>1-3 business days</strong>. </li>
+                            <li>If you pass, your account will officially become a verified host</li>
+                            <li>If it fails, you can repeat the verification</li>
+                        </ul>
+                    </div>
+                </li>
+            </ol>
+            <figure class="wa-figure ">
+                <button class="wa-image" type="button" aria-label="Open image preview">
+                    <img src="https://poppolive.co/wp-content/uploads/2026/06/1.jpg"
+                        alt="Five-step visual walkthrough of Poppo Live biometric face verification on mobile"
+                        loading="lazy" decoding="async">
+                    <span class="wa-zoom">⌕ View full image</span>
+                </button>
+                <figcaption>Face verification — complete visual walkthrough</figcaption>
+            </figure>
+        </div>
+    </section>
+    <section class="wa-section " id="host-profile">
+        <div class="wa-container">
+            <header class="wa-head">
+                <span class="wa-kicker">✦ PROFILE OPTIMIZATION</span>
+                <h2>Host Live Profile Setup &amp; Compliance Guide</h2>
+                <p class="lead">A good Host profile supports better exposure, stronger audience reach, and more
+                    opportunities for live engagement and interaction.</p>
+            </header>
+            <div class="wa-grid2 wa-gallery">
+                <figure class="wa-figure ">
+                    <button class="wa-image" type="button" aria-label="Open image preview">
+                        <img src="https://poppolive.co/wp-content/uploads/2026/06/2-1.jpg"
+                            alt="Poppo Live host profile optimization screen showing avatar and bio fields"
+                            loading="lazy" decoding="async">
+                        <span class="wa-zoom">⌕ View full image</span>
+                    </button>
+                    <figcaption>Host profile and compliance guide</figcaption>
+                </figure>
+                <figure class="wa-figure ">
+                    <button class="wa-image" type="button" aria-label="Open image preview">
+                        <img src="https://poppolive.co/wp-content/uploads/2026/06/3-1.jpg"
+                            alt="Poppo Live host profile settings for broadcast compliance" loading="lazy"
+                            decoding="async">
+                        <span class="wa-zoom">⌕ View full image</span>
+                    </button>
+                    <figcaption>Host profile and compliance guide</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+    <section class="wa-section wa-section--tint" id="host-withdrawal">
+        <div class="wa-container">
+            <header class="wa-head">
+                <span class="wa-kicker">✦ WITHDRAWAL GUIDE</span>
+                <h2>How Host can Withdraw Earnings?</h2>
+                <p class="lead">Hosts can withdraw earnings after meeting the minimum balance requirement..</p>
+            </header>
+            <div class="wa-panel wa-payout-info">
+                <p class="host-payout__support reveal">
+                    <strong>Support method:</strong> Epay, USDT, e-wallet, PayPal, Bank Transfer (Visual / Text Prepaid)
+                </p>
+                <ul class="wa-bullets">
+                    <li>Only verified hosts and agents are eligible for withdrawal</li>
+                    <li>Withdrawal method availability varies for each region</li>
+                </ul>
+            </div>
+            <div class="wa-stats">
+                <article class="wa-stat">
+                    <strong>$10</strong>
+                    <span>or 100,000 Points</span>
+                    <small>Minimum withdrawal</small>
+                </article>
+                <article class="wa-stat">
+                    <strong>×10</strong>
+                    <span>multiple</span>
+                    <small>e.g. 10, 20, 50, 500</small>
+                </article>
+                <article class="wa-stat">
+                    <strong>7</strong>
+                    <span>business days</span>
+                    <small>Processing time</small>
+                </article>
+            </div>
+            <div class="wa-subtitle">
+                <h3>Extraction Steps</h3>
+            </div>
+            <ol class="wa-steps">
+                <li class="wa-step">
+                    <span class="wa-stepnum">1</span>
+                    <div class="wa-stepcopy">
+                        <h3>Head to Your Profile</h3>
+                        <p class="host-payout__step-desc">Open Poppo Live and navigate to your profile page.</p>
+                    </div>
+                </li>
+                <li class="wa-step">
+                    <span class="wa-stepnum">2</span>
+                    <div class="wa-stepcopy">
+                        <h3>Open the ‘Points’ Menu</h3>
+                        <p class="host-payout__step-desc">Tap ‘Points’ in your profile to access your earnings overview.
+                        </p>
+                    </div>
+                </li>
+                <li class="wa-step">
+                    <span class="wa-stepnum">3</span>
+                    <div class="wa-stepcopy">
+                        <h3>Press ‘Withdraw Now’</h3>
+                        <p class="host-payout__step-desc">Your available balance will be shown here. Tap ‘Withdraw Now’
+                            to proceed.</p>
+                    </div>
+                </li>
+                <li class="wa-step">
+                    <span class="wa-stepnum">4</span>
+                    <div class="wa-stepcopy">
+                        <h3>Add Your Payment Method</h3>
+                        <p class="host-payout__step-desc">If you’re withdrawing for the first time, tap ‘Add a Payment
+                            Method’ to register one before continuing.</p>
+                    </div>
+                </li>
+                <li class="wa-step">
+                    <span class="wa-stepnum">5</span>
+                    <div class="wa-stepcopy">
+                        <h3>Select a Payment Method</h3>
+                        <p class="host-payout__step-desc">Poppo Live supports Epay, USDT, PayPal, bank transfer, and
+                            e-wallet. Availability depends on your location.</p>
+                    </div>
+                </li>
+                <li class="wa-step">
+                    <span class="wa-stepnum">6</span>
+                    <div class="wa-stepcopy">
+                        <h3>Create a Transaction PIN</h3>
+                        <p class="host-payout__step-desc">Set up a secure PIN that will be required each time you
+                            withdraw. Avoid predictable combinations to keep your funds safe.</p>
+                    </div>
+                </li>
+                <li class="wa-step">
+                    <span class="wa-stepnum">7</span>
+                    <div class="wa-stepcopy">
+                        <h3>Link Your Payout Email</h3>
+                        <p class="host-payout__step-desc">Enter the email connected to your payment account to bind it
+                            to your Poppo Live profile.</p>
+                    </div>
+                </li>
+                <li class="wa-step">
+                    <span class="wa-stepnum">8</span>
+                    <div class="wa-stepcopy">
+                        <h3>Return to ‘Points’ and Tap ‘Withdraw Now’</h3>
+                        <p class="host-payout__step-desc">Now that your payment method is in place, go back to the
+                            ‘Points’ menu and tap ‘Withdraw Now’ again.</p>
+                    </div>
+                </li>
+                <li class="wa-step">
+                    <span class="wa-stepnum">9</span>
+                    <div class="wa-stepcopy">
+                        <h3>Enter Your Amount and Submit</h3>
+                        <p class="host-payout__step-desc">Fill in your desired withdrawal amount and confirm. Funds are
+                            typically delivered within 72 hours.</p>
+                    </div>
+                </li>
+            </ol>
+            <figure class="wa-figure ">
+                <button class="wa-image" type="button" aria-label="Open image preview">
+                    <img src="https://poppolive.co/wp-content/uploads/2026/06/4-1.jpg"
+                        alt="Poppo Live host points withdrawal screen walkthrough" loading="lazy" decoding="async">
+                    <span class="wa-zoom">⌕ View full image</span>
+                </button>
+                <figcaption>Host points withdrawal guide</figcaption>
+            </figure>
+        </div>
+    </section>
+    <section class="wa-section " id="host-rules">
+        <div class="wa-container">
+            <header class="wa-head">
+                <span class="wa-kicker">✦ HOST SAFETY</span>
+                <h2>Host Rules</h2>
+                <p class="lead">To keep your Host account active and eligible for rewards, avoid the following actions
+                    during live streaming.</p>
+            </header>
+            <div class="wa-panel wa-rules">
+                <h3>Quick Host Rules</h3>
+                <ul class="wa-bullets">
+                    <li>Hosts must be at least 18 years old</li>
+                    <li>Displaying pornographic or sexually explicit content</li>
+                    <li>Wearing revealing clothing that exposes underwear (e.g., bras or panties)</li>
+                    <li>Using someone else’s account is prohibited</li>
+                    <li>Promoting third-party platforms is prohibited</li>
+                    <li>Wearing overly revealing clothing without appropriate undergarments</li>
+                    <li>Leaving your live stream unattended for extended periods</li>
+                </ul>
+                <div class="wa-action">
+                    <a class="btn btn--accent" href="/privacy-policy/">Read Full Rules</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="wa-section wa-section--tint" id="host-faq">
+        <div class="wa-container">
+            <header class="wa-head">
+                <span class="wa-kicker">✦ QUESTIONS & ANSWERS</span>
+                <h2>Frequently Asked Questions</h2>
+                <p>Answers to common questions about joining Poppo Live as a Host.</p>
+            </header>
+            <div class="wa-faq-list">
+                <details class="wa-faq">
+                    <summary>
+                        <span>Is registration as a Host free?</span>
+                        <span class="wa-faqplus" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="wa-faqbody">
+                        <p class="faq-item__answer">Yes. Anyone can join as a host simply by downloading the Poppo Live
+                            app and following the registration instructions.</p>
+                    </div>
+                </details>
+                <details class="wa-faq">
+                    <summary>
+                        <span>How do Hosts earn on Poppo Live?</span>
+                        <span class="wa-faqplus" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="wa-faqbody">
+                        <p class="faq-item__answer">Mainly, hosts can earn gifts during live streaming, gifts, and PK
+                            battles. However, Poppo Live offers various other methods such as ranking, daily salary, and
+                            more.</p>
+                    </div>
+                </details>
+                <details class="wa-faq">
+                    <summary>
+                        <span>Do I need experience to become a Host?</span>
+                        <span class="wa-faqplus" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="wa-faqbody">
+                        <p class="faq-item__answer">No. Live streaming on Poppo Live is straightforward, similar to
+                            other popular livestream platforms. New Hosts can also receive guidance and support from
+                            experienced Agents to help them get started and grow on the platform.</p>
+                    </div>
+                </details>
+                <details class="wa-faq">
+                    <summary>
+                        <span>What is the minimum withdrawal?</span>
+                        <span class="wa-faqplus" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="wa-faqbody">
+                        <p class="faq-item__answer">The minimum withdrawal requirement is $10 or 100.000 Points</p>
+                    </div>
+                </details>
+                <details class="wa-faq">
+                    <summary>
+                        <span>What is the Points conversion rate?</span>
+                        <span class="wa-faqplus" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="wa-faqbody">
+                        <p class="faq-item__answer">10.000 Points is equal to $1</p>
+                    </div>
+                </details>
+                <details class="wa-faq">
+                    <summary>
+                        <span>How is my privacy protected while streaming?</span>
+                        <span class="wa-faqplus" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="wa-faqbody">
+                        <p class="faq-item__answer">Poppo Live have privacy rules to ensure your live streaming room
+                            remains secure. However, it is also crucial that you protect yourself by refusing to share
+                            private personal details during streams or anytime.</p>
+                    </div>
+                </details>
+                <details class="wa-faq">
+                    <summary>
+                        <span>What happens if my account is suspended?</span>
+                        <span class="wa-faqplus" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="wa-faqbody">
+                        <p class="faq-item__answer">If you believe your suspension or ban was an error, our Support team
+                            is ready to connect you with Poppo Live admins to review and appeal the decision. </p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+    <section class="wa-section wa-section--last" id="host-join">
+        <div class="wa-container">
+            <div class="wa-closing">
+                <span class="wa-kicker">✦ START YOUR HOST JOURNEY</span>
+                <h2>Start Your Poppo Live Host Journey!</h2>
+                <p class="lead">Download the Poppo Live app, register your account, complete your profile, finish face
+                    verification, and start your live streaming journey while engaging with viewers and exploring
+                    earning opportunities through gifts, party, chats, and bonuses.</p>
+                <div class="wa-actions">
+                    <a class="wa-btn " href="https://invite-poppo.com/jRAjCs">Become Host</a>
+                    <a class="wa-btn wa-btn-secondary" href="https://invite-poppo.com/jRAjCs" target="_blank"
+                        rel="noopener noreferrer">Download App</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script>
+    (function () {
+        function boot() {
+            var root = document.getElementById('pco-host-wa');
+            if (!root || root.dataset.ready === 'yes') return;
+            root.dataset.ready = 'yes';
+
+            var box = document.createElement('div');
+            box.className = 'pco-host-lightbox';
+            box.hidden = true;
+            box.setAttribute('role', 'dialog');
+            box.setAttribute('aria-modal', 'true');
+            box.setAttribute('aria-label', 'Image preview');
+            box.innerHTML = '<button class="wa-close" type="button" aria-label="Close image preview"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5L19 19M19 5L5 19"/></svg></button><img alt="Expanded image preview">';
+            document.body.appendChild(box);
+
+            var target = box.querySelector('img');
+            var closeBtn = box.querySelector('button');
+            var previous = null;
+            var scroll = '';
+
+            function hide() {
+                box.hidden = true;
+                target.removeAttribute('src');
+                document.documentElement.style.overflow = scroll;
+                if (previous && previous.focus) previous.focus();
+            }
+
+            function openModal(im, triggerBtn) {
+                if (!im) return;
+                previous = triggerBtn || document.activeElement;
+                target.src = im.currentSrc || im.src;
+                target.alt = im.alt || 'Poppo Live Host';
+                scroll = document.documentElement.style.overflow;
+                document.documentElement.style.overflow = 'hidden';
+                box.hidden = false;
+                closeBtn.focus();
+            }
+
+            root.querySelectorAll('.wa-image').forEach(function (button) {
+                button.addEventListener('click', function () {
+                    var im = button.querySelector('img');
+                    openModal(im, button);
+                });
+            });
+
+            closeBtn.addEventListener('click', hide);
+            box.addEventListener('click', function (e) {
+                if (e.target === box) hide();
+            });
+            document.addEventListener('keydown', function (e) {
+                if (!box.hidden && e.key === 'Escape') hide();
+            });
+
+            root.querySelectorAll('.wa-faq').forEach(function (d) {
+                d.addEventListener('toggle', function () {
+                    if (d.open) {
+                        root.querySelectorAll('.wa-faq').forEach(function (x) {
+                            if (x !== d) x.open = false;
+                        });
+                    }
+                });
+            });
+
+            // Host Step Card Deck (Stacked Cards) Logic
+            var deck = root.querySelector('.host-step-deck');
+            if (deck) {
+                var cards = deck.querySelectorAll('.deck-card');
+                var dots = deck.querySelectorAll('.deck-dot');
+                var caption = deck.querySelector('.deck-caption');
+                var currentIndex = 0;
+                var totalCards = cards.length;
+                var isAnimating = false;
+
+                function renderDeck() {
+                    cards.forEach(function (card, i) {
+                        var pos = (i - currentIndex + totalCards) % totalCards;
+                        card.classList.remove('pos-0', 'pos-1', 'pos-2', 'pos-3', 'is-active');
+                        card.classList.add('pos-' + pos);
+                        if (pos === 0) {
+                            card.classList.add('is-active');
+                        }
+                    });
+
+                    dots.forEach(function (dot, i) {
+                        var active = (i === currentIndex);
+                        dot.classList.toggle('is-active', active);
+                        dot.setAttribute('aria-selected', active ? 'true' : 'false');
+                    });
+
+                    if (caption && cards[currentIndex]) {
+                        var cardCaption = cards[currentIndex].getAttribute('data-caption');
+                        if (cardCaption) caption.textContent = cardCaption;
+                    }
+                }
+
+                function nextCard() {
+                    if (isAnimating) return;
+                    isAnimating = true;
+
+                    var currentCard = cards[currentIndex];
+                    if (currentCard) {
+                        currentCard.classList.add('is-sliding-out');
+                    }
+
+                    setTimeout(function () {
+                        if (currentCard) {
+                            currentCard.classList.remove('is-sliding-out');
+                        }
+                        currentIndex = (currentIndex + 1) % totalCards;
+                        renderDeck();
+                        setTimeout(function () {
+                            isAnimating = false;
+                        }, 80);
+                    }, 280);
+                }
+
+                function prevCard() {
+                    if (isAnimating) return;
+                    isAnimating = true;
+                    currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+                    renderDeck();
+                    setTimeout(function () {
+                        isAnimating = false;
+                    }, 280);
+                }
+
+                function goToCard(targetIndex) {
+                    if (isAnimating || targetIndex === currentIndex) return;
+                    isAnimating = true;
+                    currentIndex = targetIndex;
+                    renderDeck();
+                    setTimeout(function () {
+                        isAnimating = false;
+                    }, 280);
+                }
+
+                // Click card or next button to advance
+                cards.forEach(function (card) {
+                    card.addEventListener('click', function (e) {
+                        if (e.target.closest('.deck-btn--zoom')) {
+                            return;
+                        }
+                        if (card.classList.contains('is-active') || e.target.closest('.deck-btn--next')) {
+                            e.preventDefault();
+                            nextCard();
+                        }
+                    });
+                });
+
+                // Zoom button click to open lightbox modal
+                cards.forEach(function (card) {
+                    var zoomBtn = card.querySelector('.deck-btn--zoom');
+                    if (zoomBtn) {
+                        zoomBtn.addEventListener('click', function (e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            var img = card.querySelector('.deck-card__img');
+                            openModal(img, zoomBtn);
+                        });
+                    }
+                });
+
+                // Dots navigation
+                dots.forEach(function (dot) {
+                    dot.addEventListener('click', function (e) {
+                        e.stopPropagation();
+                        var targetIndex = parseInt(dot.getAttribute('data-index'), 10);
+                        if (!isNaN(targetIndex)) goToCard(targetIndex);
+                    });
+                });
+
+                // Touch swipe support for mobile
+                var touchStartX = 0;
+                var touchEndX = 0;
+                var stack = deck.querySelector('.deck-stack');
+                if (stack) {
+                    stack.addEventListener('touchstart', function (e) {
+                        touchStartX = e.changedTouches[0].screenX;
+                    }, { passive: true });
+                    stack.addEventListener('touchend', function (e) {
+                        touchEndX = e.changedTouches[0].screenX;
+                        if (touchStartX - touchEndX > 45) {
+                            nextCard();
+                        } else if (touchEndX - touchStartX > 45) {
+                            prevCard();
+                        }
+                    }, { passive: true });
+                }
+
+                // Keyboard arrow navigation when deck is focused or hovered
+                deck.addEventListener('keydown', function (e) {
+                    if (e.key === 'ArrowRight') {
+                        e.preventDefault();
+                        nextCard();
+                    } else if (e.key === 'ArrowLeft') {
+                        e.preventDefault();
+                        prevCard();
+                    }
+                });
+            }
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', boot);
+        } else {
+            boot();
+        }
+    })();
+</script>
